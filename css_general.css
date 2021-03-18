@@ -1,0 +1,31 @@
+/*HEADER*/
+#header {
+  height: 50px;
+  background-color: rgba(241,114,64,1);
+  z-index: 6;
+  display : flex;
+  align-items : center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+
+}
+#slogan {
+  color: white;
+  line-height: 1.5;
+  width: 100%;
+  font-size: 20px
+}
+#headline {
+    padding-left: 50px;
+}
+
+html,
+body,
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
