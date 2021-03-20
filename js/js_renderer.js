@@ -87,7 +87,7 @@ require(["esri/renderers/ClassBreaksRenderer", "esri/renderers/SimpleRenderer"],
         type: "simple",
         symbol: {
             type: "simple-fill",
-            color: [221, 243, 255, 0.33],
+            color: [221, 243, 255, 0.5],
             outline: {
                 width: 1.0,
                 color: "#343434"
@@ -96,5 +96,9 @@ require(["esri/renderers/ClassBreaksRenderer", "esri/renderers/SimpleRenderer"],
 
         }
     };
+
+    highlight_renderer = {
+
+    }
 
 });
