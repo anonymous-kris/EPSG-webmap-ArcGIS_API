@@ -20,9 +20,14 @@ require([
     "esri/geometry/projection",
     "esri/geometry/SpatialReference",
     "esri/geometry/Geometry",
-    "esri/widgets/Popup"
+    "esri/widgets/Popup",
+    "esri/widgets/Legend",
+    "esri/core/watchUtils",
+    "dojo/query",
+    "dojo/aspect",
+    "dojo/domReady!"
 
-], function (esriConfig, Map, MapView, Graphic, GraphicsLayer, FeatureLayer, GeoJSONLayer, ClassBreaksRenderer, SimpleRenderer, projection, SpatialReference, Geometry, Popup) {
+], function (esriConfig, Map, MapView, Graphic, GraphicsLayer, FeatureLayer, GeoJSONLayer, ClassBreaksRenderer, SimpleRenderer, projection, SpatialReference, Geometry, Popup, Legend, watchUtils, aspect, query) {
 
 
 //        esriConfig.apiKey = "API_KEY";
@@ -120,11 +125,10 @@ require([
                 layerId: 2,
                 renderer: countries_renderer,
                 spatialReference: viewSpatialReference,
-                popupTemplate: template
+                popupTemplate: template,
 
 
-            });
-
+            })
 
             countries_EEZ.load();
 
@@ -187,32 +191,25 @@ require([
                     spatialReference: SpatialReference.WGS84
                 }
             });
-/* Point Layer
-    const graphicsLayer = new GraphicsLayer();
-    map.add(graphicsLayer);
-
-    const point = {
-        type: "point",
-        longitude: -118.80657463861,
-        latitude: 34.0005930608889
-    };
-    const simpleMarkerSymbol = {
-        type: "simple-marker",
-        color: [226, 119, 40], 
-        outline: {
-            color: [255, 255, 255],
-            width: 1
-        }
-    };
-
-    const pointGraphic = new Graphic({
-        geometry: point,
-        symbol: simpleMarkerSymbol
-    });
-    graphicsLayer.add(pointGraphic);
-*/
 
 
+
+            //legend
+            var legend = new Legend({
+                view: view,
+                layerInfos: [{
+                    layer: countries_EEZ,
+                    title: "Datums per country"
+                }]
+
+            });
+
+
+
+            view.ui.add(legend, "bottom-right");
+
+
+// INTRO:
             $('#description').on("click", function () {
                 $('#backdrop').remove();
                 $('#header').remove();

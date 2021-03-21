@@ -119,3 +119,8 @@ table, th, td {
     color: white;
     background-color: black;
 }
+
+
+.esri-legend__layer-caption {
+    display: none;
+}
