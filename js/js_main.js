@@ -103,11 +103,6 @@ require([
             }
 
 
-            var basicPopup = new Popup({
-                content: " < p > { UNION } has { datum_anal } different datums, excluding global datums.</p >"
-            });
-
-
 //Define the popup template
             var template = {
               
@@ -168,7 +163,7 @@ require([
                 zoom: 4, // Zoom level
                 container: "viewDiv", // Div element
  //               spatialReference: viewSpatialReference,
-                popup: basicPopup
+ //               popup: basicPopup
             });
 
             view.graphics.add({

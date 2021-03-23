@@ -7,11 +7,11 @@ require(["esri/renderers/ClassBreaksRenderer", "esri/renderers/SimpleRenderer"],
     colorRamp = ['#fef0d9', '#fdcc8a', '#fc8d59', '#e34a33', '#b30000']
     countries_renderer = new ClassBreaksRenderer({
         type: "class-breaks",
-        field: "datum_anal",
+        field: "datum_an_1",
             classBreakInfos: [
             {
                 minValue: 0,
-                maxValue: 2.0,
+                maxValue: 3.0,
                 symbol: {
                     type: "simple-fill", // autocasts as new SimpleFillSymbol()
                     color: colorRamp[0],
@@ -21,11 +21,11 @@ require(["esri/renderers/ClassBreaksRenderer", "esri/renderers/SimpleRenderer"],
                         color: "#828282"
                     }
                     },
-                label: "0 - 2"
+                label: "0 - 3"
             },
             {
-                minValue: 2.1,
-                maxValue: 9.0,
+                minValue: 3.1,
+                maxValue: 10.0,
                 symbol: {
                     type: "simple-fill", // autocasts as new SimpleFillSymbol()
                     color: colorRamp[1],
@@ -35,10 +35,10 @@ require(["esri/renderers/ClassBreaksRenderer", "esri/renderers/SimpleRenderer"],
                         color: "#828282"
                     }
                 },
-                label: "3 - 9"
+                label: "4 - 10"
             },
             {
-                minValue: 9.1,
+                minValue: 10.1,
                 maxValue: 17.0,
                 symbol: {
                     type: "simple-fill", // autocasts as new SimpleFillSymbol()
@@ -49,7 +49,7 @@ require(["esri/renderers/ClassBreaksRenderer", "esri/renderers/SimpleRenderer"],
                         color: "#E1E1E1"
                     }
                 },
-                label: "10 - 17"
+                label: "11 - 17"
             },
             {
                 minValue: 17.1,
@@ -77,7 +77,7 @@ require(["esri/renderers/ClassBreaksRenderer", "esri/renderers/SimpleRenderer"],
                         color: "#E1E1E1"
                     }
                 },
-                label: "23 - 28"
+                label: "23 - 29"
             }
         ]
     }
