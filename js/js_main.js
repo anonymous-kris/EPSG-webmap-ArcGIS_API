@@ -116,7 +116,7 @@ require([
         //load layers
 
             countries_EEZ = new FeatureLayer({
-                url: "https://services8.arcgis.com/r4ZrjsxaQDDQnsYP/arcgis/rest/services/EEZ_country/FeatureServer",
+                url: "https://services1.arcgis.com/iLnjttk8pGiISSJD/arcgis/rest/services/CountryEEZ_Datum_analysis/FeatureServer/2",
                 layerId: 2,
                 renderer: countries_renderer,
                 spatialReference: viewSpatialReference,
@@ -128,7 +128,7 @@ require([
             countries_EEZ.load();
 
             ocean_50m = new FeatureLayer({
-            url: "https://services8.arcgis.com/r4ZrjsxaQDDQnsYP/arcgis/rest/services/ne_50m_ocean/FeatureServer/2",
+                url: "https://services1.arcgis.com/iLnjttk8pGiISSJD/arcgis/rest/services/ne_50m_ocean/FeatureServer/2",
             renderer: ocean_renderer,
             spatialReference: viewSpatialReference,
             minScale: 29999999
@@ -137,7 +137,7 @@ require([
 
 
             ocean_110m = new FeatureLayer({
-                url: "https://services8.arcgis.com/r4ZrjsxaQDDQnsYP/arcgis/rest/services/ne_110m_ocean/FeatureServer/2",
+                url: "https://services1.arcgis.com/iLnjttk8pGiISSJD/arcgis/rest/services/ocean_110m/FeatureServer/2",
                 renderer: ocean_renderer,
                 spatialReference: viewSpatialReference,
                 maxScale: 30000000
