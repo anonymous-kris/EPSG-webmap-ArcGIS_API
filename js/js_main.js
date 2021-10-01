@@ -31,7 +31,7 @@ require([
 
 
 //        esriConfig.apiKey = "API_KEY";
-        esriConfig.apiKey = "AAPKa58952a2265747bd9ac145fad44dc2f2cXQ2oX59X30MA6KOKodC8iHVppnYE4SgGj57QKKCzNfr3hVjBQIzMCF4DZBclLm2";
+        esriConfig.apiKey = "AAPK80bdaafae12845c2aa8c7fab7c2f71aa-WCkh7mzW3AMwVvhasWuQpMzV9cmCNIVRYsipCx66i1DQm9mnyZyMJIi7SuacprO";
 
     //PROJECTION
     //load the projection module 
